@@ -21,33 +21,42 @@ signOutButton.addEventListener("click", async () => {
 const db = getFirestore();
 
 // Show passwords function
+// Show passwords function
 const showPasswords = async () => {
     const tb = document.getElementById("passwords-table");
     tb.innerHTML = `<tr>
         <th>Website</th>
         <th>Username</th>
         <th>Password</th>
-        <th>Actions</th>
+        <th>Delete</th>
     </tr>`;
-    
+
     const passwordsCollection = collection(db, "passwords");
     const passwordDocs = await getDocs(passwordsCollection);
     
-    passwordDocs.forEach((doc) => {
-        const data = doc.data();
+    if (passwordDocs.empty) {
+        // If no passwords are found, show the message
         tb.innerHTML += `<tr>
-            <td>${data.website}</td>
-            <td>${data.username}</td>
-            <td>
-                <span class="password-hidden" id="password-hidden-${doc.id}" style="display: inline;">********</span>
-                <span class="password" id="password-${doc.id}" style="display: none;">${data.password}</span>
-                <button onclick="togglePasswordVisibility('${doc.id}')">Show/Hide</button>
-                <button class="btnsm" onclick="copyToClipboard('${data.password}')">Copy</button>
-            </td>
-            <td><button class="btnsm" onclick="deletePassword('${doc.id}')">Delete</button></td>
+            <td colspan="4">Your entered passwords will show up here.</td>
         </tr>`;
-    });
+    } else {
+        passwordDocs.forEach((doc) => {
+            const data = doc.data();
+            tb.innerHTML += `<tr>
+                <td>${data.website}</td>
+                <td>${data.username}</td>
+                <td>
+                    <span class="password-hidden" id="password-hidden-${doc.id}" style="display: inline;">********</span>
+                    <span class="password" id="password-${doc.id}" style="display: none;">${data.password}</span>
+                    <button onclick="togglePasswordVisibility('${doc.id}')">Show/Hide</button>
+                    <button class="btnsm" onclick="copyToClipboard('${data.password}')">Copy</button>
+                </td>
+                <td><button class="btnsm" onclick="deletePassword('${doc.id}')">Delete</button></td>
+            </tr>`;
+        });
+    }
 };
+
 
 // Function to add password
 document.getElementById("password-form").addEventListener("submit", async (e) => {
