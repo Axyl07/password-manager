@@ -21,7 +21,6 @@ body {
 
 .key-logo:hover{
     cursor: pointer;
-color: aquamarine;
     transform: scale(1.1);
 }
 
