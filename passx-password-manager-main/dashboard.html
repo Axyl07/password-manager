@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassX - Your Personal Password Manager</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">PassX</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>About</li>
+            <li>Contact</li>
+            <li><button id="sign-out" class="btn">Sign Out</button></li>
+        </ul>
+    </nav>
+    <div class="key-logo" style=" margin:0px; padding:0px; display:flex; justify-content: center;">
+        <!-- SVG key logo here -->
+    </div>
+    <h1 style="display: flex; justify-content: center;">Password Manager</h1>
+    <div class="container">
+        <form id="password-form">
+            <div class="add-pass">
+                <h2>Add a Password</h2>
+                <label for="website">Website:</label>
+                <input type="text" id="website" name="website" required>
+                <br><br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="pass-table">
+            <h2>Your Passwords :<span id="alert">(Copied!)</span></h2>
+            <table id="passwords-table">
+                <tr>
+                    <th>Website</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="dashboard.js" type="module"></script>
+</body>
+
+</html>

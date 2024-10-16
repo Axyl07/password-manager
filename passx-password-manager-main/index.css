@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@300;400;600&display=swap");
+
+body {
+    background: url(./Background.svg);
+    font-size: 25px;
+    color: #efd5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.key-logo{
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.key-logo:hover{
+    cursor: pointer;
+color: aquamarine;
+    transform: scale(1.1);
+}
+
+nav {
+  margin: 2vh 10vw;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 1);
+ transition: 0.3s ease;
+  padding: 12px 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+nav:hover
+{
+    transform: scale(1.02);
+}
+
+.logo {
+  margin: 0 23px;
+  font-weight: 800;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  margin: 0 23px;
+  align-items: center;
+}
+
+ul > li {
+  list-style: none;
+  margin: 0 13px;
+  cursor: pointer;
+}
+
+ul > li:hover {
+  color: aquamarine;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80vw;
+  margin: 0px auto;
+}
+
+
+h1,
+h2,
+h3 {
+  margin: 0px 0;
+}
+
+.btn {
+    color: #efd5ff;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  padding: 8px 17px;
+  font-weight: 900;
+  margin: 25px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.2);
+    color: aquamarine;
+}
+.btnsm {
+    transition: 0.3s ease;
+  padding: 8px 17px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 1);
+
+  color: #efd5ff;
+  font-weight: 900;
+  cursor: pointer;
+}
+.btnsm:hover{
+    color: #f50202;
+    transform: scale(1.1);
+}
+
+
+#alert {
+  display: none;
+}
