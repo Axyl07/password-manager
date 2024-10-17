@@ -126,3 +126,53 @@ h3 {
 #alert {
   display: none;
 }
+
+
+/* rgb animation */
+.card{
+  cursor: pointer;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  color: white;
+
+}
+
+
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), 	#4285F4, #34A853,#FBBC05, #EA4335, rgb(6, 233, 55) );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 2s spin linear infinite;
+}
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}

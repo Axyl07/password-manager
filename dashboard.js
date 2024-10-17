@@ -48,7 +48,7 @@ const showPasswords = async () => {
                 <td>
                     <span class="password-hidden" id="password-hidden-${doc.id}" style="display: inline;">********</span>
                     <span class="password" id="password-${doc.id}" style="display: none;">${data.password}</span>
-                    <button onclick="togglePasswordVisibility('${doc.id}')">Show/Hide</button>
+                    <button class="btnsm" onclick="togglePasswordVisibility('${doc.id}')">👀</button>
                     <button class="btnsm" onclick="copyToClipboard('${data.password}')">Copy</button>
                 </td>
                 <td><button class="btnsm" onclick="deletePassword('${doc.id}')">Delete</button></td>
