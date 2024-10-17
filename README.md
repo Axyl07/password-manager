@@ -8,7 +8,7 @@ A **Password Manager** web application that allows users to securely store their
 - **Firestore Integration:** Store, retrieve, and delete passwords securely in the cloud.
 - **Toggle Password Visibility:** Hide or reveal passwords on the dashboard.
 - **Copy to Clipboard:** Quickly copy saved passwords with a button click.
-- **Responsive UI:** User-friendly design that adapts across devices.
+- **User-Friendly UI:** Designed for ease of use across devices (mobile responsiveness will be addressed in future updates).
 - **Sign Out Functionality:** Log out easily with a sign-out button.
 
 ## 🛠️ Technologies Used
