@@ -1,54 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PassX - Your Personal Password Manager</title>
-    <link rel="stylesheet" href="dashboard.css">
-</head>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div class="logo">MyKey</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>About</li>
-            <li>Contact</li>
-            <li><button id="sign-out" class="btn">Sign Out</button></li>
-        </ul>
+      <div class="logo">MyKey</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>About</li>
+        <li>Contact</li>
+        <li><button id="sign-out" class="btn">Sign Out</button></li>
+      </ul>
     </nav>
 
-    <h1 style="display: flex; justify-content: center;">Password Manager</h1>
+    <h1 style="display: flex; justify-content: center">Your Dashboard:</h1>
+
     <div class="container">
-        <form id="password-form">
-            <div class="add-pass">
-                <h2>Add a Password</h2>
-                <label for="website">Website:</label>
-                <input type="text" id="website" name="website" required>
-                <br><br>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br>
-                <button class="btn" type="submit">Submit</button>
-            </div>
-        </form>
-        <div class="pass-table">
-            <h2>Your Passwords :<span id="alert">(Copied!)</span></h2>
-            <table id="passwords-table">
-                <tr>
-                    <th>Website</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Actions</th>
-                </tr>
-            </table>
+      <form id="password-form">
+        <div class="add-pass">
+          <h2>Add a Password</h2>
+          <label for="website">Website:</label>
+          <input type="text" id="website" name="website" required />
+          <br /><br />
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <br /><br />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <br />
+          <button class="btn" type="submit">Submit</button>
         </div>
+      </form>
+      <div class="right-side">
+        
+        <!-- Password Strength Checker Section -->
+        <div class="feature-container">
+          <h3>Check Password Strength (1->5 i.e. Weak->Strong)</h3>
+          <div style="display: flex; margin-top: 10px; align-items: center">
+            <input
+            style="border-radius: 100px;"
+              type="text"
+              id="strength-password"
+              placeholder="Enter your password"
+            />
+            <button id="check-strength" class="btnsm" style="margin-left: 10px">
+              Check Strength
+            </button>
+          </div>
+          <p id="strength-result" style="margin-top: 10px">Strength:</p>
+          <div
+            class="strength-bar-container"
+            style="
+              width: 100%;
+              background-color: #ddd;
+              border-radius: 4px;
+              overflow: hidden;
+            "
+          >
+            <div
+              id="strength-bar"
+              style="height: 10px; width: 0; background-color: green"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Password Generator Section -->
+        <div class="feature-container">
+          <h3>Generate a Strong Password</h3>
+          <button id="generate-password" class="btn">Generate Password</button>
+          <div style="display: flex; margin-top: 10px; align-items: center">
+            <input
+              style="border-radius: 100px"
+              type="text"
+              id="generated-password"
+              placeholder="Generated Password"
+              readonly
+            />
+            <button id="copy-password" class="btnsm" style="margin-left: 10px">
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <div class="password-list">
+          <h2>Your Passwords :<span id="alert">(Copied!)</span></h2>
+          <table id="passwords-table">
+            <tr>
+              <th>Website</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Actions</th>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
     <script src="dashboard.js" type="module"></script>
-</body>
-
+  </body>
 </html>

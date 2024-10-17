@@ -2,7 +2,7 @@
 
 body {
     background: url(./Background.svg);
-    font-size: 25px;
+    font-size: 20px;
     color: #efd5ff;
 }
 
@@ -110,7 +110,7 @@ h3 {
   padding: 8px 17px;
   font-weight: 900;
  
-  margin: 25px 0;
+  margin: 10px 0;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -162,7 +162,7 @@ input{
     -webkit-backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 1);
 }
-.pass-table{
+.password-list{
   /* From https://css.glass */
   padding: 25px;
   background: rgba(255, 255, 255, 0.14);
@@ -176,3 +176,55 @@ input{
 #alert {
   display: none;
 }
+
+
+#generated-password {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+
+
+.feature-container {
+  margin: 10px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.strength-bar {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: background-color 0.3s;
+}
+
+#strength-password {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+
+
+#strength-bar {
+  height: 10px;
+  width: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.weak { background-color: red; }
+.medium { background-color: orange; }
+.strong { background-color: green; }
