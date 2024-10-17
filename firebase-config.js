@@ -1,7 +1,6 @@
 // firebase-config.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-auth.js";
-
+import { getAuth, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-auth.js";
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBZydKBDJ1F6MtkzajWvOoCPUyi8cO-2ls",
@@ -15,5 +14,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-export { auth };
+export const auth = getAuth(app);
+export const googleProvider = new GoogleAuthProvider();
