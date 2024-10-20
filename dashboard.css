@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@300;400;600&display=swap");
 
+:root{
+  --main-color: #efd5ff;
+  --background-color: rgba(255, 255, 255, 0.14);
+
+}
+
 body {
     background: url(./Background.svg);
     font-size: 20px;
-    color: #efd5ff;
+    color: var(--main-color,pink);
 }
 
 * {
@@ -100,8 +106,8 @@ h3 {
 }
 
 .btn {
-    color: #efd5ff;
-  background: rgba(255, 255, 255, 0.14);
+    color: var(--main-color,pink);
+  background: var(--background-color,black);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
@@ -121,14 +127,14 @@ h3 {
 .btnsm {
     transition: 0.3s ease;
   padding: 8px 17px;
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--background-color,black);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 1);
 
-  color: #efd5ff;
+  color: var(--main-color,pink);
   font-weight: 900;
   cursor: pointer;
 }
@@ -146,7 +152,7 @@ img {
 }
 input{
   
-    background-color: #efd5ff;
+    background-color: var(--main-color,pink);
 }
 .add-pass{
     display: flex;
@@ -155,7 +161,7 @@ input{
     padding: 5px 25px;
     margin: 0px 25px;
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.14);
+    background: var(--background-color,black);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
@@ -165,7 +171,7 @@ input{
 .password-list{
   /* From https://css.glass */
   padding: 25px;
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--background-color,black);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
@@ -191,7 +197,7 @@ input{
 .feature-container {
   margin: 10px 0;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--background-color,black);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
