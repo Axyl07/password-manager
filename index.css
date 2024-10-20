@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@300;400;600&display=swap");
 
+:root{
+  --main-color: #efd5ff;
+  --background-color: rgba(255, 255, 255, 0.14);
+
+}
+
 body {
     background: url(./Background.svg);
     font-size: 25px;
-    color: #efd5ff;
+    color: var(--main-color,pink);
 }
 
 * {
@@ -26,7 +32,7 @@ body {
 
 nav {
   margin: 2vh 10vw;
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--background-color,black);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
@@ -86,7 +92,7 @@ h3 {
 }
 
 .btn {
-    color: #efd5ff;
+    color: var(--main-color,pink);
   background: rgba(255, 255, 255, 0.14);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -106,7 +112,7 @@ h3 {
 .btnsm {
     transition: 0.3s ease;
   padding: 8px 17px;
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--background-color,black);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
